@@ -1,0 +1,35 @@
+.contianer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.btnGroup {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+    cursor: pointer;
+
+    .btn1 {
+        background-color: yellowgreen;
+        padding: 5px 15px;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: skyblue;
+        }
+    }
+
+    .btn2 {
+        background-color: pink;
+        padding: 5px 15px;
+        margin-left: 20px;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: skyblue;
+        }
+    }
+}
