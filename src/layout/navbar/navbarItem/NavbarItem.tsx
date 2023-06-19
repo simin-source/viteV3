@@ -1,3 +1,7 @@
+import { Fragment } from '@vue/runtime-dom';
+import { ElMenuItem, ElSubMenu } from 'element-plus';
+import 'element-plus/es/components/menu-item/style/css';
+import 'element-plus/es/components/sub-menu/style/css';
 import NavbarItem from '../navbarItem/NavbarItem';
 export default defineComponent({
     name: 'NavbarItem',
@@ -15,11 +19,8 @@ export default defineComponent({
             default: '',
         },
     },
-    mounted() {
-
-    },
     render() {
-        return <tem>
+        return <Fragment>
             {this.item.children ?
                 <ElMenuItem index={this.item.path}>
                     {this.item.meta.title}
@@ -33,6 +34,6 @@ export default defineComponent({
                     <router-link style={{textDecoration: 'none', width: '100%', color: '#000'}} to={this.item.path}>{this.item.meta.title}</router-link>
                 </ElMenuItem>
             }
-        </tem>;
+        </Fragment>;
     },
 });

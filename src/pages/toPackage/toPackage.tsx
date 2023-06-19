@@ -12,7 +12,7 @@ export default defineComponent({
   data() {
     return {
       packageInfo: {
-        file_name: '',
+        file_name: 'dist123.zip',
         env: 8443,
         project: 'fengxian',
       } as FileType,
@@ -73,39 +73,83 @@ export default defineComponent({
             onChange={this.fileInfo}
           />
           <div class={btnGroup}>
-            <bttton class={btn1} onclick={() => { this.packageInfo.env = 8443; this.packageInfo.project = 'fengxian'; this.publish(this.packageInfo); }}>发布丰县H5测服8443</bttton>
-            <bttton class={btn2} onclick={() => {
+            <bttton class={btn1} onclick={() => {
+              this.packageInfo.env = 8443;
+              this.packageInfo.project = 'fengxian';
+              this.publish(this.packageInfo);
+            }}>发布丰县H5测服8443</bttton>
+            {/* <bttton class={btn2} onclick={() => {
               this.packageInfo.env = 443;
               this.packageInfo.project = 'fengxian';
               this.publish(this.packageInfo);
-            }}>发布丰县H5正服443</bttton>
+            }}>发布丰县H5正服443</bttton> */}
           </div>
           <div class={btnGroup}>
-            <bttton class={btn1} onclick={() => { this.packageInfo.env = 8443; this.packageInfo.project = 'campus'; this.publish(this.packageInfo); }}>发布园区官网测服8443</bttton>
+            <bttton class={btn1} onclick={() => {
+              this.packageInfo.env = 8443;
+              this.packageInfo.project = 'chongqing';
+              this.publish(this.packageInfo);
+            }}>发布重庆H5测服8443</bttton>
+            {/* <bttton class={btn2} onclick={() => {
+              this.packageInfo.env = 443;
+              this.packageInfo.project = 'fengxian';
+              this.publish(this.packageInfo);
+            }}>发布重庆H5正服443</bttton> */}
+          </div>
+          <div class={btnGroup}>
+            <bttton class={btn1} onclick={() => {
+              this.packageInfo.env = 8443;
+              this.packageInfo.project = 'datong';
+              this.publish(this.packageInfo);
+            }}>发布大同H5测服8443</bttton>
+            {/* <bttton class={btn2} onclick={() => {
+              this.packageInfo.env = 443;
+              this.packageInfo.project = 'datong';
+              this.publish(this.packageInfo);
+            }}>发布大同H5正服443</bttton> */}
+          </div>
+          <div class={btnGroup}>
+            <bttton class={btn1} onclick={() => {
+              this.packageInfo.env = 8443;
+              this.packageInfo.project = 'campus';
+              this.publish(this.packageInfo);
+            }}>发布园区官网测服8443</bttton>
             <bttton class={btn2} onclick={() => {
               this.packageInfo.env = 443;
               this.packageInfo.project = 'campus';
               this.publish(this.packageInfo);
             }}>发布园区官网正服443</bttton>
           </div>
-          <div class={btnGroup}>
-            <bttton class={btn1} onclick={() => { this.packageInfo.env = 8443; this.packageInfo.project = 'hongfeng'; this.publish(this.packageInfo); }}>发布宏沣官网测服8443</bttton>
+          {/* <div class={btnGroup}>
+            <bttton class={btn1} onclick={() => {
+              this.packageInfo.env = 8443;
+              this.packageInfo.project = 'hongfeng';
+              this.publish(this.packageInfo);
+            }}>发布宏沣官网测服8443</bttton>
             <bttton class={btn2} onclick={() => {
               this.packageInfo.env = 443;
               this.packageInfo.project = 'hongfeng';
               this.publish(this.packageInfo);
             }}>发布宏沣官网正服443</bttton>
-          </div>
-          <div class={btnGroup}>
-            <bttton class={btn1} onclick={() => { this.packageInfo.env = 8443; this.packageInfo.project = 'biovillage'; this.publish(this.packageInfo); }}>发布康辉后台测服8443</bttton>
+          </div> */}
+          {/* <div class={btnGroup}>
+            <bttton class={btn1} onclick={() => {
+              this.packageInfo.env = 8443;
+              this.packageInfo.project = 'biovillage';
+              this.publish(this.packageInfo);
+            }}>发布康辉后台测服8443</bttton>
             <bttton class={btn2} onclick={() => {
               this.packageInfo.env = 443;
               this.packageInfo.project = 'biovillage';
               this.publish(this.packageInfo);
             }}>发布康辉后台正服443</bttton>
-          </div>
+          </div> */}
           <div class={btnGroup}>
-            <bttton class={btn1} onclick={() => { this.packageInfo.env = 8443; this.packageInfo.project = 'tst-app-coll'; this.publish(this.packageInfo); }}>发布tst-app-coll测服8443</bttton>
+            <bttton class={btn1} onclick={() => {
+              this.packageInfo.env = 8443;
+              this.packageInfo.project = 'tst-app-coll';
+              this.publish(this.packageInfo);
+            }}>发布tst-app-coll测服8443</bttton>
             <bttton class={btn2} onclick={() => {
               this.packageInfo.env = 443;
               this.packageInfo.project = 'tst-app-coll';
@@ -113,12 +157,36 @@ export default defineComponent({
             }}>发布tst-app-coll正服443</bttton>
           </div>
           <div class={btnGroup}>
-            <bttton class={btn1} onclick={() => { this.packageInfo.env = 8443; this.packageInfo.project = 'tool-coll'; this.publish(this.packageInfo); }}>发布tool-coll测服8443</bttton>
+            <bttton class={btn1} onclick={() => {
+              this.packageInfo.env = 8443;
+              this.packageInfo.project = 'tool-coll';
+              // 发布采集数据
+              this.publish(this.packageInfo);
+            }}>发布tool-coll测服8443</bttton>
             <bttton class={btn2} onclick={() => {
               this.packageInfo.env = 443;
               this.packageInfo.project = 'tool-coll';
               this.publish(this.packageInfo);
             }}>发布tool-coll正服443</bttton>
+          </div>
+          <div class={btnGroup}>
+            <bttton class={btn1} onclick={() => {
+              this.packageInfo.env = 8443;
+              this.packageInfo.project = 'analysis';
+              this.publish(this.packageInfo);
+            }}>发布大同吴悦流量分析平台测服8443</bttton>
+            <bttton class={btn2} onclick={() => {
+              this.packageInfo.env = 443;
+              this.packageInfo.project = 'analysis';
+              this.publish(this.packageInfo);
+            }}>发布大同吴悦流量分析平台l正服443</bttton>
+          </div>
+          <div class={btnGroup}>
+            <bttton class={btn1} onclick={() => {
+              this.packageInfo.env = 8443;
+              this.packageInfo.project = 'tst-official';
+              this.publish(this.packageInfo);
+            }}>发布centmap官网测服8443</bttton>
           </div>
         </div>
       </Fragment>

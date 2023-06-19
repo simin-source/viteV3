@@ -1,4 +1,5 @@
 import Navbar from '@/layout/navbar/Navbar';
+import { defineComponent } from 'vue';
 import { RouterView } from 'vue-router';
 /*
 主布局文件

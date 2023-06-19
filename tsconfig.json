@@ -35,10 +35,8 @@
       "src/**/*.ts",
       "src/**/*.d.ts",
       "src/**/*.tsx",
-      "*.vue",
-      "./auto-imports.d.ts",
-      "./components.d.ts"
-  ],
+      "src/**/*.vue"
+, "src/utils/screen.js"  ],
   "exclude": [
       "node_modules",
       "./**/*.js"

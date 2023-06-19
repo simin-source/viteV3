@@ -1,3 +1,6 @@
+import protobuf from 'protobufjs';
+import { Fragment } from 'vue';
+
 const demo = reactive({
   name: '小王',
   soulmate: {
@@ -8,6 +11,70 @@ const demo = reactive({
     },
   },
 });
+
+// protobuf.load('hello.proto', (err, root: any) => {
+//   if (err) throw err;
+
+//   const helloMessage = root.lookupType('webflow.HelloWorld');
+//   const payload = {
+//     name: 'https://www.centmap.com',
+//     cookie: 'csm',
+//     browser: 'baidu',
+//   };
+  //   const message1 = helloMessage.create(payload);
+  //   const buffer = helloMessage.encode(message1).finish();
+  //   const message2 = helloMessage.decode(buffer);
+  //   const object = helloMessage.toObject(message2);
+
+  //   console.log(message1);
+  //   console.log(message2);
+  //   console.log(buffer);
+  //   console.log(object);
+  //   navigator.sendBeacon('/log', buffer);
+  // 结果
+  // <Buffer 0a 05 48 65 6c 6c 6f>
+  // { message: 'Hello' }
+// });
+
+// protobuf.load('analysis.proto', (err, root: any) => {
+//   if (err) throw err;
+
+//   const analysisData = root.lookupType('form.Analysis');
+//   const payload = {
+//     domain: 'https://www.centmap.com',
+//     token: 'csm',
+//     page: '/#test',
+//     referrer: '',
+//   };
+//     const message1 = analysisData.create(payload);
+//     const buffer = analysisData.encode(message1).finish();
+    // const message2 = analysisData.decode(buffer);
+    // const object = analysisData.toObject(message2);
+    // console.log(message1);
+    // console.log(message2);
+    // console.log(buffer);
+    // console.log(object);
+    // navigator.sendBeacon('https://chenkai-data.centmap.com:8200/analysis.send', buffer);
+// });
+
+// function getLevel2domain(url: string) {
+//   try {
+//     let subdomain = ''
+//     const domain = url ? url.split('/') : ''
+//     const domainList = domain[2].split('.')
+//     const urlItems = []
+//     urlItems.unshift(domainList.pop())
+//     while (urlItems.length < 2) {
+//       urlItems.unshift(domainList.pop())
+//       subdomain = urlItems.join('.')
+//     }
+//     return subdomain
+//   } catch (e) {
+//     return ''
+//   }
+// }
+
+// console.log(getLevel2domain('https://www.abc.zhihu.com/hot/1234'));
 
 export default defineComponent({
   name: 'WatchCase',
@@ -65,7 +132,7 @@ export default defineComponent({
   },
   render() {
     return (
-      <template>
+      <Fragment>
         <h2>watch监听器的几种写法</h2>
         <div onClick={() => {
           this.year = '2022';
@@ -82,7 +149,7 @@ export default defineComponent({
           // };
           demo.soulmate.work.address = '闵行';
         }}>更新</div>
-      </template >
+      </Fragment >
     );
   },
 });

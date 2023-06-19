@@ -1,0 +1,10 @@
+syntax = "proto3";
+package form;
+option go_package = "./form";
+
+message Analysis {
+  string domain = 1;
+  string token = 2;
+  string page = 3;
+  string referer = 4;
+}
