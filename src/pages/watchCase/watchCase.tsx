@@ -148,7 +148,8 @@ export default defineComponent({
           //   work: {},
           // };
           demo.soulmate.work.address = '闵行';
-        }}>更新</div>
+        }}
+        >更新</div>
       </Fragment >
     );
   },

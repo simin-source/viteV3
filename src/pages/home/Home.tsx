@@ -1,5 +1,6 @@
-import Navbar from '@/layout/navbar/Navbar';
-import { defineComponent } from 'vue';
+import Navbar from '@/layout/navbar2/Navbar';
+// import Navbar from '@/layout/navbar/Navbar';
+import { Fragment, defineComponent } from 'vue';
 import { RouterView } from 'vue-router';
 /*
 主布局文件
@@ -7,9 +8,9 @@ import { RouterView } from 'vue-router';
 export default defineComponent({
     name: 'Home',
     render() {
-        return <div>
+        return <Fragment>
             <Navbar />
             <RouterView />
-        </div>;
+        </Fragment>;
     },
 });

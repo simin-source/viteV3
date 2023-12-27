@@ -18,7 +18,7 @@ class UserManager {
         resetRouter();
         sessionStorage.setItem('roleID', `${roleId}`);
         const routerObj = routerFactory(roleId);
-        router.addRoute(routerObj.route);
+        console.log('工厂',routerObj.route);
         this.isAddRoutes = true;
         if (routerObj.route.children) this.applyActions = routerObj.route.children;
         router.push({ name: routerObj.name });

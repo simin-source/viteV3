@@ -2,14 +2,14 @@ import { userManager } from '@/store/user';
 import { ElMenu } from 'element-plus';
 import 'element-plus/es/components/menu/style/css';
 import { Fragment } from 'vue';
-import style from './Navbar.module.scss';
+import { menuOver } from './Navbar.module.scss';
 import NavbarItem from './navbarItem/NavbarItem';
 export default defineComponent({
     name: 'Navbar',
     render() {
         return <Fragment>
             <ElMenu
-                class={style.menuOver}
+                class={menuOver}
                 mode="horizontal"
                 popper-effect="light"
             >
