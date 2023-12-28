@@ -191,7 +191,7 @@ router.beforeEach((to, from, next) => {
     userManager.isAddRoutes = true;
     next({ ...to, replace: true }); //replace: true只是一个设置信息，告诉VUE本次操作后，不能通过浏览器后退按钮
   } else {
-    let isAllow = router.getRoutes().some((item) => item.path == to.path);
+    const isAllow = router.getRoutes().some(item => item.path === to.path);
     console.log(router.getRoutes(), isAllow, to.path);
     if (isAllow) {
       next(); //表示当前导航守卫放行

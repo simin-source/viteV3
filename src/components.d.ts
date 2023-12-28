@@ -8,7 +8,14 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     DropContent: typeof import('./components/drop/dropContent.vue')['default']
+    ElOption: typeof import('element-plus/es')['ElOption']
+    ElPagination: typeof import('element-plus/es')['ElPagination']
+    ElSelect: typeof import('element-plus/es')['ElSelect']
+    ElTable: typeof import('element-plus/es')['ElTable']
+    ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
+    MyTable: typeof import('./components/myTable/myTable.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Table: typeof import('./components/myTable/table.vue')['default']
   }
 }

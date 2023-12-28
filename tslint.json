@@ -11,10 +11,10 @@
             true,
             "array-simple"
         ],
-        "no-console": true,
+        "no-console": false,
         "arrow-return-shorthand": true,
         "no-import-side-effect": [
-            true,
+            false,
             {
                 "ignore-module": "(\\.less|\\.css|\\.scss)$|^(echarts/)"
             }
@@ -126,7 +126,7 @@
             "ignore-comments"
         ],
         "no-irregular-whitespace": true,
-        "no-consecutive-blank-lines": true,
+        "no-consecutive-blank-lines": false,
         "no-non-null-assertion": true,
         "object-literal-shorthand": true,
         "only-arrow-functions": [
@@ -149,7 +149,7 @@
         "use-isnan": true,
         "space-within-parens": true,
         "quotemark": [
-            true,
+            false,
             "single",
             "jsx-double",
             "avoid-template"
@@ -194,7 +194,7 @@
         ],
         "prefer-template": true,
         "ordered-imports": [
-            true,
+            false,
             {
                 "import-sources-order": "lowercase-last",
                 "named-imports-order": "lowercase-first"

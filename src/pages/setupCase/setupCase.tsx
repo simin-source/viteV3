@@ -1,9 +1,9 @@
 import { Fragment } from 'vue';
-import { ElForm, ElFormItem, ElInput, ElButton} from 'element-plus';
-import 'element-plus/es/components/form/style/css'
-import 'element-plus/es/components/form-item/style/css'
-import 'element-plus/es/components/input/style/css'
-import 'element-plus/es/components/button/style/css'
+import { ElForm, ElFormItem, ElInput, ElButton } from 'element-plus';
+import 'element-plus/es/components/form/style/css';
+import 'element-plus/es/components/form-item/style/css';
+import 'element-plus/es/components/input/style/css';
+import 'element-plus/es/components/button/style/css';
 export function useUserRepositories(user: any) {
     const newUser = ref('');
     const getUser = () => {
@@ -21,20 +21,20 @@ function validateName(rule: any, value: any, callback: any) {
     if (value === '') {
         callback(new Error('请输入账号'));
     }
-};
+}
 
 function validatePass(rule: any, value: any, callback: any) {
     if (value === '') {
         callback(new Error('请输入密码'));
     }
-};
+}
 
 const formRules = {
     name: [
-        { validator: validateName, required: true, trigger: 'blur', message: '请输入账号', },// required: false默认情况下是不带*
+        { validator: validateName, required: true, trigger: 'blur', message: '请输入账号', }, // required: false默认情况下是不带*
     ],
     password: [
-        { validator: validatePass, required: true, trigger: 'blur', message: '请输入密码', },// required: true默认情况下是带*
+        { validator: validatePass, required: true, trigger: 'blur', message: '请输入密码', }, // required: true默认情况下是带*
     ],
 };
 
@@ -45,7 +45,7 @@ export default defineComponent({
             count: 1,
             userForm: {
                 name: '',
-                password: ''
+                password: '',
             },
         };
     },
@@ -87,16 +87,17 @@ export default defineComponent({
     },
     methods: {
         submit() {
-            this.$refs.formLogin.validate((valid) => {
+            //@ts-ignore
+            this.$refs.formLogin.validate(valid => {
                 console.log(valid);
                 if (valid) {
-                    console.log('submit!')
+                    console.log('submit!');
                 } else {
-                    console.log('error submit!')
-                    return false
+                    console.log('error submit!');
+                    return false;
                 }
             });
-        }
+        },
     },
     render() {
         return <Fragment>

@@ -1,9 +1,6 @@
-import Button from '@/components/button/Button';
+import Button from '@/components/myButton/myButton';
 import Mock from 'mockjs';
 import { Fragment } from 'vue';
-
-import mySwiper from '@/components/mySwiper/mySwiper';
-
 export const useName = () => {
   const name2 = ref('名字2');
   const setName2 = (v: any) => {
@@ -103,7 +100,7 @@ export default defineComponent({
   render() {
     return (
       <Fragment>
-        {/* <h2>vue中使用hooks</h2>
+        <h2>vue中使用hooks</h2>
         <div>
           vue(2.6+)只能在setup内使用(写法依赖于组合式API)
         </div>
@@ -127,8 +124,7 @@ export default defineComponent({
         <div>---------------------------------</div>
         <h3>监听屏幕尺寸</h3>
         <div>宽度：{this.width}</div>
-        <div>高度：{this.height}</div> */}
-        {/* <mySwiper/> */}
+        <div>高度：{this.height}</div>
       </Fragment >
     );
   },

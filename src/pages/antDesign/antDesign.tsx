@@ -1,5 +1,5 @@
 import 'ant-design-vue/lib/grid/style';
-import { Row, Col, Button } from "ant-design-vue";
+import { Row, Col } from "ant-design-vue";
 import { defineComponent } from 'vue';
 
 export default defineComponent({
