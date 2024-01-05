@@ -1,5 +1,5 @@
 import { Fragment } from 'vue';
-import { ElForm, ElFormItem, ElInput, ElButton } from 'element-plus';
+import { ElForm, ElFormItem, ElInput, ElButton, ElIcon, ElUpload } from 'element-plus';
 import 'element-plus/es/components/form/style/css';
 import 'element-plus/es/components/form-item/style/css';
 import 'element-plus/es/components/input/style/css';
@@ -123,6 +123,22 @@ export default defineComponent({
                 </ElFormItem>
                 <ElButton type="primary" onClick={this.submit} >登录</ElButton>
             </ElForm>
+            <ElUpload
+                class="upload-demo"
+                drag
+                action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15"
+                multiple
+                v-slots={{
+                    tip: () => <div class="ElUpload__tip">
+                        jpg/png files with a size less than 500kb
+                    </div>,
+                }}
+            >
+                {/* <ElIcon class="el-icon--upload"><UploadFilled/></ElIcon> */}
+                <div class="ElUpload__text">
+                    Drop file here or <em>click to upload</em>
+                </div>
+            </ElUpload>
         </Fragment >;
     },
 });

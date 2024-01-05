@@ -156,7 +156,7 @@ onMounted(() => {
       selected: false, //选中状态
     },
   ];
-  workDataList.value.forEach(item => {
+  workDataList.value.forEach((item: { name: string }) => {
     const mIdx = rolesNameList.value.indexOf(item.name);
     if (mIdx === -1) rolesNameList.value.push(item.name);
   });

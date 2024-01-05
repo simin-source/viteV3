@@ -11,6 +11,7 @@ declare module '*.css'
 declare module '*.scss'
 
 declare module 'mockjs'
+declare module 'three'
 
 interface ImportMetaEnv {
   VITE_APP_TITLE: string

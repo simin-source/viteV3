@@ -14,8 +14,10 @@
     "dbscanjs": "^1.0.1",
     "element-plus": "^2.2.26",
     "mockjs": "^1.1.0",
+    "pinia": "^2.1.7",
     "protobufjs": "^7.2.1",
     "puppeteer": "^20.1.0",
+    "three": "^0.160.0",
     "vue": "^3.2.41",
     "vue-router": "^4.1.6",
     "webpack": "^5.82.0"

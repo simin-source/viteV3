@@ -2,7 +2,6 @@ import {
   createRouter,
   createWebHashHistory,
   createWebHistory,
-  Router,
   RouteRecordRaw,
 } from "vue-router";
 
@@ -101,6 +100,12 @@ const hostRoute = {
       component: AntDesign,
       meta: { title: "antd组件库" },
     },
+    {
+      path: "/ar",
+      name: "ar",
+      component: () => import("@/pages/ar/ar"),
+      meta: { title: "ar导航" },
+    },
   ],
 } as RouteRecordRaw;
 
@@ -154,7 +159,7 @@ export function routerFactory(role: number) {
   }
 }
 
-export let router = createRouter({
+export const router = createRouter({
   history: createWebHashHistory(),
   // history: createWebHistory(),
   routes,
@@ -191,8 +196,10 @@ router.beforeEach((to, from, next) => {
     userManager.isAddRoutes = true;
     next({ ...to, replace: true }); //replace: true只是一个设置信息，告诉VUE本次操作后，不能通过浏览器后退按钮
   } else {
-    const isAllow = router.getRoutes().some(item => item.path === to.path);
-    console.log(router.getRoutes(), isAllow, to.path);
+    const isAllow = router
+      .getRoutes()
+      .some((item: any) => item.path === to.path);
+    // console.log(router.getRoutes(), isAllow, to.path);
     if (isAllow) {
       next(); //表示当前导航守卫放行
     } else {
